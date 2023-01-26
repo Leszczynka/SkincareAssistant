@@ -1,0 +1,16 @@
+body {
+    background-color: #F8F7F6;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #958779;
+    letter-spacing: 0.2em;
+
+}
+.brandtext {
+    font-family: 'Gistesy', sans-serif;
+    font-size: 42px;
+    color: #000000;
+}
