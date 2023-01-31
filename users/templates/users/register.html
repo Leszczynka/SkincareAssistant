@@ -1,0 +1,49 @@
+{% extends "skincare_app/base.html" %}
+{% load static %}
+{% block content %}
+	<div class="container">
+		<div class="row d-flex justify-content-center align-items-center">
+			<div class="col-sm-12 col-md-10">
+				<div class="card rounded-3 mb-5">
+					<div class="card-body mx-1">
+						<div class="row justify-content-center d-flex align-items-center">
+							<div class="col-md-8 col-lg-6 pe-3">
+								<img class="img-fluid" src="{% static 'skincare_app/photo5.png' %}">
+							</div>
+							<div class="col-md-12 col-lg-6 py-3">
+								<form method="POST">
+									{% csrf_token %}
+										<p class="my-header text-center">Join Now</p>
+									<div class="form-group mb-2">
+										<label>Username</label>
+										<input type="text" class="form-control" name="username">
+									</div>
+									<div class="form-group">
+										<label>Email</label>
+										<input type="email" class="form-control" name="email">
+									</div>
+									<div class="form-group mb-2">
+										<label>Password</label>
+										<input type="password" class="form-control" name="password1">
+                    </div>
+									<div class="form-group mb-3">
+										<label>Confirm password</label>
+										<input type="password" class="form-control" name="password2">
+									</div>
+									<div class="form-group text-center pt-1">
+										<button class="btn btn-light btn-lg my-2 brown-button" type="submit">Sign Up</button>
+									</div>
+								</form>
+								<div class="text-center mt-2">
+									<small class="text-muted">
+										Already have an account? <a href="{% url 'login' %}">Sign In</a>
+									</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "skincare_app/base.html" %}
+{% block content %}
+	<div class="container">
+		<div class="card rounded-3 py-3 text-center">
+			<div class="d-flex justify-context-center align-items-center">
+				<div class="card-body">
+					<h4 class="card-title">You have been logged out.</h4>
+					<a href="{% url 'login' %}">Log In Again</a>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
