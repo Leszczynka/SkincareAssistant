@@ -4,39 +4,31 @@
 	<div class="container">
 		<div class="row d-flex justify-content-center align-items-center">
 			<div class="col-sm-12 col-md-10">
-				<div class="card rounded-3 mb-5">
+				<div class="card rounded-3 py-2 px-2">
 					<div class="card-body mx-1">
 						<div class="row justify-content-center d-flex align-items-center">
 							<div class="col-md-8 col-lg-6 pe-3">
-								<img class="img-fluid" src="{% static 'skincare_app/photo5.png' %}">
+								<img class="img-fluid" src="{% static 'skincare_app/photo4.png' %}">
 							</div>
-							<div class="col-md-12 col-lg-6 py-3">
+							<div class="col-md-12 col-lg-6">
 								<form method="POST">
 									{% csrf_token %}
-										<p class="my-header text-center">Join Now</p>
+									<p class="my-header text-center pb-3">Log In</p>
 									<div class="form-group mb-2">
 										<label>Username</label>
 										<input type="text" class="form-control" name="username">
 									</div>
-									<div class="form-group">
-										<label>Email</label>
-										<input type="email" class="form-control" name="email">
-									</div>
 									<div class="form-group mb-2">
 										<label>Password</label>
-										<input type="password" class="form-control" name="password1">
+										<input type="password" class="form-control" name="password">
                     </div>
-									<div class="form-group mb-3">
-										<label>Confirm password</label>
-										<input type="password" class="form-control" name="password2">
-									</div>
-									<div class="form-group text-center pt-1">
-										<button class="btn btn-light btn-lg my-2 brown-button" type="submit">Sign Up</button>
+									<div class="form-group text-center py-3">
+										<button class="btn btn-light btn-lg brown-button" type="submit">Login</button>
 									</div>
 								</form>
 								<div class="text-center mt-2">
 									<small class="text-muted">
-										Already have an account? <a href="{% url 'login' %}">Sign In</a>
+										Need An Account? <a href="{% url 'register' %}">Sign Up Now</a>
 									</small>
 								</div>
 							</div>

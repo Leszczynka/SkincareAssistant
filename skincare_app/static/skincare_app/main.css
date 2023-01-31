@@ -3,7 +3,35 @@ body {
     font-family: 'Perpetua';
 }
 
-.brownbutton {
+a {
+    color: #A17D60;
+}
+
+a:hover {
+	color: #896345;
+}
+
+a:visited {
+	color: #896345;
+}
+
+a:active {
+	color: #A17D60;
+}
+
+.brand-header {
+    font-family: 'Gistesy', sans-serif;
+    font-size: 42px;
+    color: #000000;
+}
+
+.my-header {
+    font-family: 'Gistesy', sans-serif;
+    font-size: 50px;
+    color: #000000;
+}
+
+.brown-button {
     border-color: #F8F7F6;
     background-color: #958779;
     color: #F8F7F6;
@@ -14,11 +42,5 @@ body {
     font-size: 18px;
     color: #958779;
     letter-spacing: 0.2em;
-}
-
-.navheader {
-    font-family: 'Gistesy', sans-serif;
-    font-size: 46px;
-    color: #000000;
 }
 
