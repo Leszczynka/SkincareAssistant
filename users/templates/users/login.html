@@ -1,5 +1,6 @@
 {% extends "skincare_app/base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 	<div class="container">
 		<div class="row d-flex justify-content-center align-items-center">
@@ -14,14 +15,9 @@
 								<form method="POST">
 									{% csrf_token %}
 									<p class="my-header text-center pb-3">Log In</p>
-									<div class="form-group mb-2">
-										<label>Username</label>
-										<input type="text" class="form-control" name="username">
-									</div>
-									<div class="form-group mb-2">
-										<label>Password</label>
-										<input type="password" class="form-control" name="password">
-                    </div>
+									<fieldset class="form-group">
+										{{ form|crispy }}
+									</fieldset>
 									<div class="form-group text-center py-3">
 										<button class="btn btn-light btn-lg brown-button" type="submit">Login</button>
 									</div>
