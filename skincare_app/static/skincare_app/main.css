@@ -3,6 +3,10 @@ body {
     font-family: 'Perpetua';
 }
 
+p {
+    margin-bottom: 0;
+}
+
 a {
     color: #A17D60;
 }
@@ -49,4 +53,10 @@ a:active {
     height: 150px;
     object-fit: cover;
     object-position: 25% 25%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: contain;
 }
