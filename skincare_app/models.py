@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
+class Product(models.Model):
+    name = models.CharField(max_length=150)
+    brand = models.CharField(max_length=100)
+    category = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='product_images', max_length=200)
