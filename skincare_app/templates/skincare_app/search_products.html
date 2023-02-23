@@ -1,0 +1,39 @@
+{% extends "skincare_app/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="container my-3">
+		<h3 class="text-uppercase border-bottom mb-4">Search Products</h3>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-5">
+				<form method="GET">
+					<fieldset class="form-group">
+						{{ form|crispy }}
+					</fieldset>
+					<div class="form-group">
+						<button class="btn btn-light btn-lg my-2 brown-button" type="submit">Search</button>
+					</div>
+				</form>
+      </div>
+    </div>
+		<h3 class="text-uppercase border-bottom mb-4">Search Results</h3>
+    <div class="row row-cols-1 row-cols-2 row-cols-md-4 g-3">
+  		{% if products %}
+				{% for product in products %}
+					<div class="col">
+						<div class="card h-100">
+							<img src="{{ product.image }}" class="card-img-top py-3 px-3">
+							<div class="card-body">
+								<p class="card-text fw-bold fs-6">{{ product.brand }}</p>
+								<p class="card-title">{{ product.name }}</p>
+								<p class="card-title">{{ product.category }}</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			{% else %}
+				<p>No products matching your search criteria</p>
+			{% endif %}
+    </div>
+  </div>
+{% endblock %}
